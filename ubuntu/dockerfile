@@ -1,0 +1,12 @@
+# ci-docker-ubuntu/ubuntu/Dockerfile
+FROM ubuntu:latest
+
+LABEL maintainer="ton-email@example.com"
+
+RUN apt-get update && apt-get install -y \
+    curl \
+    vim \
+    git \
+    && apt-get clean
+
+CMD ["bash"]
